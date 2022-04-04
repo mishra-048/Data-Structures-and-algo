@@ -8,22 +8,7 @@ ii)Depth for Search
 
 */
 
-/*
-//inorder tree traversal
-void inorder(Node *root)
-{
-    if(root !=NULL)
-    {
-        inorder(root->left);
-        cout<<(root->key)<<" ";
-        inorder(root->right);
-    }
-}
-
-//Time complixity is O(n);
-//Auxiliary space is O(h);
-*/
-
+//***** Depth For Search *****//
 /*
 //preorder traversal
 void preorder(Node *root)
@@ -39,6 +24,22 @@ void preorder(Node *root)
 //Time complixity is O(n);
 //Auxiliary space is O(h);
 
+*/
+
+/*
+//inorder tree traversal
+void inorder(Node *root)
+{
+    if(root !=NULL)
+    {
+        inorder(root->left);
+        cout<<(root->key)<<" ";
+        inorder(root->right);
+    }
+}
+
+//Time complixity is O(n);
+//Auxiliary space is O(h);
 */
 
 /*
