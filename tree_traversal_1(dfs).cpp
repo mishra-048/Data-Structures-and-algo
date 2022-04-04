@@ -1,5 +1,5 @@
 /*
-Two types;
+Two types of traversal;
 i)Breadth for Search
 ii)Depth for Search
     a)inorder   ->    (left , root , right)
