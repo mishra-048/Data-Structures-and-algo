@@ -1,5 +1,5 @@
 /*
-//Function for returning the size of the binary tree.
+//Function for finding the size of the binary tree.
 int get_size(Node *root)
 {
     if(root==NULL)
