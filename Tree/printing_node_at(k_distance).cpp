@@ -1,4 +1,4 @@
-
+/*
 // Printing the nodes at k level from the root
 
 void print_dist(Node *root, int k)
@@ -19,3 +19,5 @@ void print_dist(Node *root, int k)
 }
 // Time complixity is O(n);
 // Auxiliary space is O(h);
+
+*/

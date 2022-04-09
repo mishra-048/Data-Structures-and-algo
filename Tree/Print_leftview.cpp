@@ -1,6 +1,7 @@
 /*
 //Printing the left view of the binary tree
 //method 1;
+This method is based on the recursive call of the function .(Recursive call)
 
 int maxlevel=0;
 void printleft(Node *root,int level)
@@ -24,6 +25,7 @@ void printleftView(Node *root)
 ------------------------------------------
 
 //method 2;
+
 void printleft(Node *root)
 {
     if(root==NULL)
