@@ -15,4 +15,29 @@ ex: 5 -> single element present in the tree
           /
          2              //2+0=2
 
+
+//Logic implementation using the code.
+
+void children_sum(NOde *root)
+{
+    if(root==NULL)
+    {
+        return true;
+    }
+    if(root->left == NULL && root->right)
+    {
+        return true;
+    }
+    int sum=0;
+    if(root->left !=NULL)
+    {
+        sum+=root->left->key;
+    }
+    if(root->right !=NULL)
+    {
+        sum+=root->right->key;
+    }
+    return (root->key == sum && children_sum(root->left) && children_sum(root->right));
+}
+
 */
