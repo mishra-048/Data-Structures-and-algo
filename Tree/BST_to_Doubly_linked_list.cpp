@@ -28,3 +28,36 @@ Node *BST_to_DLL(Node *root)
 }
 
 */
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll n;
+        cin >> n;
+        ll arr[n], count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
+                if ((arr[i] * arr[j]) > 0)
+                    count++;
+            }
+        }
+        cout << count << endl;
+    }
+
+    return 0;
+}
