@@ -27,6 +27,10 @@ Node *BST_to_DLL(Node *root)
     return head;
 }
 
+
+// The time complixity of the code is O(n);
+// The auxiliary space of the code is O(h) where h is the height of the tree.
+
 */
 
 #include <bits/stdc++.h>
@@ -43,18 +47,42 @@ int main()
     {
         ll n;
         cin >> n;
-        ll arr[n], count = 0;
-        for (int i = 0; i < n; i++)
+        ll rem = 0, count = 0;
+
+        if (n >= 5)
         {
-            cin >> arr[i];
-        }
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = i + 1; j < n; j++)
+            count = n / 5;
+            n = n % 5;
+            if (n >= 3)
             {
-                if ((arr[i] * arr[j]) > 0)
-                    count++;
+                count = count + n / 3;
+                n = n % 3;
+                if (n >= 1)
+                {
+                    count = count + n / 1;
+                    n = n % 1;
+                }
             }
+            else
+            {
+                count = count + n / 1;
+                n = n % 1;
+            }
+        }
+        else if (n >= 3 && n < 5)
+        {
+            count = n / 3;
+            n = n % 3;
+            if (n >= 1)
+            {
+                count = count + n / 1;
+                n = n % 1;
+            }
+        }
+        else
+        {
+            count = n / 1;
+            n = n % 1;
         }
         cout << count << endl;
     }
