@@ -1,6 +1,6 @@
 /*
-//
-The approach is based on the inorder traversal of the bst wiht the processing of the nodes.
+
+//This code is based on the inorder traversal of the BST.
 The approach is based on the recursive call of the function in which we first go to the left most element then we process that node and then we process the right most element .
 
 //The code of the above implementation is
@@ -33,59 +33,30 @@ Node *BST_to_DLL(Node *root)
 
 */
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-typedef long long ll;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    ll t;
+    // your code goes here
+    int t;
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
-        ll rem = 0, count = 0;
-
-        if (n >= 5)
+        int n, x;
+        cin >> n >> x;
+        int sum = n * x, avg = 0, ans = 0;
+        int arr[n - 1];
+        for (int i = 0; i < n - 1; i++)
         {
-            count = n / 5;
-            n = n % 5;
-            if (n >= 3)
-            {
-                count = count + n / 3;
-                n = n % 3;
-                if (n >= 1)
-                {
-                    count = count + n / 1;
-                    n = n % 1;
-                }
-            }
-            else
-            {
-                count = count + n / 1;
-                n = n % 1;
-            }
+            cin >> arr[i];
+            avg += arr[i];
         }
-        else if (n >= 3 && n < 5)
-        {
-            count = n / 3;
-            n = n % 3;
-            if (n >= 1)
-            {
-                count = count + n / 1;
-                n = n % 1;
-            }
-        }
+        ans = sum - avg;
+        if (ans <= 0)
+            cout << "0" << endl;
         else
-        {
-            count = n / 1;
-            n = n % 1;
-        }
-        cout << count << endl;
+            cout << ans << endl;
     }
-
     return 0;
 }
