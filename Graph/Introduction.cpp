@@ -42,11 +42,70 @@ There are two types of the graph
     Problems :
     It is storing the retendent information i.e It is storing the information of the edges which is
     present but also it is storing the information of the edges which is not present also.
-    
+
 (ii)Adjacency List->In this we have an array of lists where lists are most popularly represented as :
                     (a)Dynamics Sized Arrays
                     (b)Linked lists
 
 
+              Undirected graph V+2E
+            /
+Space O(V+E)
+            \
+              Directed graph V+E
+
+    Operations :
+    Check if there is an edge from u to v:O(v)
+    Find all adjacent of u : O(degree (u))
+    Find degree of u : O(1)
+    Add an edge : O(1)
+    Remove an edge : O(v)
+
+                1
+               /|
+              / |
+             0  |  3
+              \ | /
+                2
+
+                    _     _
+                0) |1|---|2|
+                    _     _
+                1) |0|---|2|
+                    _     _     _
+                2) |0|---|1|---|3|
+                    _
+                3) |2|
+
+
+
+Implementation :
+void printGraph(vector<int>,adj[],int v)
+{
+    for(int i=0;i<v;i++)
+    {
+        for(int x:adj[i])
+        {
+            cout<<x<<" ";
+            cout<<"\n";
+        }
+    }
+}
+void addEdge(vector<int>adj[],int u,int v)
+{
+    adj[u].push_back(v);
+    adj[v].push_back(u);
+}
+int main()
+{
+    int v=4;
+    vector<int>adj[v];
+    addEdge(adj,0,1);
+    addEdge(adj,0,2);
+    addEdge(adj,1,2);
+    addEdge(adj,1,3);
+    printGraph(adj,v);
+    return 0;
+}
 
 */
