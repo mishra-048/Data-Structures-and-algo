@@ -42,7 +42,10 @@ There are two types of the graph
     Problems :
     It is storing the retendent information i.e It is storing the information of the edges which is
     present but also it is storing the information of the edges which is not present also.
-
+    
+(ii)Adjacency List->In this we have an array of lists where lists are most popularly represented as :
+                    (a)Dynamics Sized Arrays
+                    (b)Linked lists
 
 
 
