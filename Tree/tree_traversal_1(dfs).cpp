@@ -10,7 +10,7 @@ ii)Depth for Search
 
 //***** Depth For Search *****//
 /*
-//preorder traversal
+//preorder traversals
 void preorder(Node *root)
 {
     if(root!=NULL)
