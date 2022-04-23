@@ -26,11 +26,17 @@ There are two types of the graph
 // A graph is called cyclic when a walk starts and ends on the same vertix.
 // Weighted graph is a graph in which every edge is assigned some weight which is generally given according to the lenght of the edge.
 
+// Bipartite Graph: It is an undirected graph G = (V, E) in which V = V1 + V2 and there are edges only between vertices in V1 and V2
 
 
 
 //Representation of the graphs
 (i)Adjacency Matrix->for undirected graph it forms a symmetric matrix
+Prefered when :
+                The graph is dense : |E| is close to |v|2
+                We need to quickly determine if there is an edge between two vertices
+Disadvantages:
+                No quick way to determine the vertices adjacent to another
     // Operations on the graph
     Space Required: Q(v*v)
     Operations :
@@ -77,36 +83,11 @@ Space O(V+E)
                     _
                 3) |2|
 
+    // Prefered when : The graph is sparce :|E|<<|V|2
+                        We need to quickly determine the nodes adjacent to the given nodes
+    // Disadvantages:
+                        No quick way to determine whether there is an edge between node u and v                    
 
 
-Implementation :
-// Code for the implementation of the logic for making and printing the adjacency list
-void printGraph(vector<int>,adj[],int v)
-{
-    for(int i=0;i<v;i++)
-    {
-        for(int x:adj[i])
-        {
-            cout<<x<<" ";
-            cout<<"\n";
-        }
-    }
-}
-void addEdge(vector<int>adj[],int u,int v)
-{
-    adj[u].push_back(v);
-    adj[v].push_back(u);
-}
-int main()
-{
-    int v=4;
-    vector<int>adj[v];
-    addEdge(adj,0,1);
-    addEdge(adj,0,2);
-    addEdge(adj,1,2);
-    addEdge(adj,1,3);
-    printGraph(adj,v);
-    return 0;
-}
 
 */
