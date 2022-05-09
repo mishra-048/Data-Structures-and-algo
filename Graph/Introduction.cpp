@@ -1,6 +1,6 @@
 /*
 There are two types of the graph
-(i)Directed
+(i)Undirected
             v1--------v3
             |          | \
             |          |  \
@@ -10,7 +10,7 @@ There are two types of the graph
             v2--------v4
 
 
-(ii)Undirected
+(ii)Directed
 
 
 
