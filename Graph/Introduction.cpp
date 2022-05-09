@@ -14,11 +14,12 @@ There are two types of the graph
 
 
 
-
+//Just for testing 
 // Walk->Travelling through the nodes in which repeatation is allowed
          For a walk there should be an edge available for it;
          v1,v2,v4 is a walk but v1,v5 is not a walk as there is not an edge in the walk.
 
+//
 // Path->Path is a special walk in which no repeatation is allowed.
 
 ----  In some books a walk is termed as a path and a path is termed a simple path.  ----
